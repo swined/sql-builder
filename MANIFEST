@@ -1,0 +1,17 @@
+Changes
+MANIFEST
+META.yml # Will be created by "make dist"
+Makefile.PL
+README
+SQL/Builder.pm
+SQL/Builder/Condition.pm
+SQL/Builder/Query.pm
+SQL/Builder/TableRef.pm
+SQL/Builder/Condition/And.pm
+SQL/Builder/Condition/Eq.pm
+SQL/Builder/Condition/Or.pm
+SQL/Builder/Condition/Raw.pm
+SQL/Builder/Query/Select.pm
+SQL/Builder/TableRef/Raw.pm
+SQL/Builder/TableRef/Table.pm
+
