@@ -12,5 +12,6 @@ lib/SQL/Builder/Condition/Eq.pm
 lib/SQL/Builder/Condition/Or.pm
 lib/SQL/Builder/Condition/Raw.pm
 lib/SQL/Builder/Query/Select.pm
+lib/SQL/Builder/Query/Insert.pm
 lib/SQL/Builder/TableRef/Raw.pm
 lib/SQL/Builder/TableRef/Table.pm

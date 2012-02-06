@@ -31,4 +31,9 @@ sub map :ARGS(__PACKAGE__, DBI::db, 'CODE?', 'list?') {
 	return @result;
 }
 
+sub do :ARGS(__PACKAGE__, DBI::db, 'list?') {
+  my ($self, $dbh, @bind) = @_;
+  $dbh->do($self->toSql($dbh), undef, @bind);
+}
+
 1;
