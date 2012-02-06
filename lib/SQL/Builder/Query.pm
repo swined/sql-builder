@@ -16,4 +16,19 @@ sub foreach :ARGS(__PACKAGE__, DBI::db, 'CODE', 'list?') {
 	return;
 }
 
+sub map :ARGS(__PACKAGE__, DBI::db, 'CODE?', 'list?') {
+	my ($self, $dbh, $cb, @bp) = @_;
+	my @result;
+	$cb ||= sub { $_ };
+	$self->foreach(
+		$dbh,
+		sub {
+			my @r = &$cb($_);
+			push @result, @r if @r;
+		},
+		@bp,
+	);
+	return @result;
+}
+
 1;
