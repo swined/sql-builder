@@ -15,3 +15,7 @@ lib/SQL/Builder/Query/Select.pm
 lib/SQL/Builder/Query/Insert.pm
 lib/SQL/Builder/TableRef/Raw.pm
 lib/SQL/Builder/TableRef/Table.pm
+lib/SQL/Builder/Order/Field.pm
+lib/SQL/Builder/Order/Raw.pm
+lib/SQL/Builder/Order.pm
+lib/SQL/Builder/Limit.pm
