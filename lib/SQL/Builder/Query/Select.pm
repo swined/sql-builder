@@ -44,7 +44,7 @@ sub toSql :ARGS(__PACKAGE__, DBI::db) {
   $self->{where} ||= SQL::Builder::Condition::new('-RAW' => '1 = 1');
   die sprintf '%s is not a valid SQL::Builder::Condition', $self->{where} unless UNIVERSAL::isa($self->{where}, 'SQL::Builder::Condition');
   my $order = join ', ', map { $_->toSql($dbh) } @{$self->{order} || []};
-  $order = sprintf 'ORDER BY %s', $order if $order;
+  $order = sprintf 'ORDER BY %s', $order if $order ne '';
   my $limit = $self->{limit} ? $self->{limit}->toSql($dbh) : '';
   return sprintf 
     'SELECT * FROM %s WHERE %s %s %s', 
