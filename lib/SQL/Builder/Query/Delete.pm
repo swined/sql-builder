@@ -29,7 +29,7 @@ sub toSql :ARGS(__PACKAGE__, DBI::db) {
   return sprintf 
     'DELETE FROM %s WHERE %s', 
     map { $_->toSql($dbh) }
-    $self->{from},
+    $self->{table},
     $self->{where},
 }
 
