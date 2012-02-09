@@ -13,7 +13,7 @@ use SQL::Builder::Limit;
 sub new :ARGS('scalar') {
   my ($table) = @_;
   return bless { 
-	table => SQL::Builder::TableRef::Table::new($table);
+	table => SQL::Builder::TableRef::Table::new($table)
   };
 }
 
